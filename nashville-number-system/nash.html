@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Nashville Number System Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='stylenash.css'/>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class='header-container'>
+      <header>
+        <h1>Nashville Number System</h1>
+      </header>
+    </div>
+      <div class="page">
+        <div class="directions">
+          <p>Directions: Use the following randomly generated key and numbers to determine the chords in the progression...</p>
+        </div>
+        
+        <div class="question">
+          <div class="button-gen">
+            <button id="generate"><strong>Generate</strong></button>
+          </div>         
+          <ul class="qboxes">
+            <li id="key"></li>
+            <li class="random-parts" id="random1"></li>
+            <li class="random-parts" id="random2"></li>
+            <li class="random-parts" id="random3"></li>
+            <li class="random-parts" id="random4"></li>
+          </ul>
+        </div>
+
+        <div class="answer">
+            <div class="button-container">
+              <div class="button-sub">
+                <button id="submit"><strong>Submit</strong></button>
+              </div>
+              <div class="button-give-up">
+                <button id="reveal"><strong>Answer</strong></button>
+              </div>
+          </div>
+          <div class="notes">
+            <input type="text" id="answer1">
+            <input type="text" id="answer2">
+            <input type="text" id="answer3">
+            <input type="text" id="answer4">
+          </div>
+        </div>
+
+        <div class="game">
+          <div class="complete" id="complete"></div>
+        </div>
+      </div>
+    <script src="nashmain.js"></script>
+  </body>
+</html>
+

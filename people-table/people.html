@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <!--
+    Assignment:
+      Using Javascript:
+        1. Add a button to the form that says "Add".
+        2. When you press is, get all values from inputs.
+        3. Append a new row to your table with those values (use jquery)
+        4. Clear out inputs after you add.!!!!!!!
+      Then:
+        1. Add a new column to table.
+        2. Add a delete button to each row in the new column
+        3. When you click delete, prompt the user if they want to delete.
+        4. If they click ok (or yes) then delete that row from the table (use jquery)
+  -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Table of People</title>
+    <link href="people_style.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div class="page">
+        <div class="formContainer">
+            <form action="#" method="post" id="form" name="form">
+                <h2>Create a Person!</h2><br/>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"><br><br>              
+      
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age"><br><br>                    
+                          
+                <label for="occupation">Occupation:</label>
+                <input type="text" name="occupation" id="occupation"><br><br>                    
+                          
+                <label for="education">Education:</label>
+                <input type="text" name="education" id="education"><br><br>
+      
+                <input type="button" class="add-row" value="Add Row">
+                <input type="button" class="delete-row" value="Delete Row">
+                
+            </form>                
+          </div>
+      <div class="pTable">
+        <table name="people" id="people">
+          <thead>
+            <tr>
+              <th colspan="5">
+                <h1>People</h1><hr>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <h3>Select</h3>
+              </th>
+              <th>
+                <h3>Name</h3>
+              </th>
+              <th>
+                <h3>Age</h3>
+              </th>
+              <th>
+                <h3>Occupation</h3>
+              </th>
+              <th>
+                <h3>Education</h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" name="record"></td>
+              <td>Mike</td>
+              <td>28</td>
+              <td>Financial Analyst</td>
+              <td>Bachelors Degree</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="record"></td>
+              <td>Casey</td>
+              <td>29</td>
+              <td>Chemist</td>
+              <td>Bachelors Degree</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="record"></td>
+              <td>Tony</td>
+              <td>30</td>
+              <td>Mechanical Engineer</td>
+              <td>Bachelors Degree</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="record"></td>
+              <td>Pat</td>
+              <td>23</td>
+              <td>Butcher</td>
+              <td>Bachelors Degree</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+  </div>
+    <script src="people.js"></script>
+  </body>
+</html>

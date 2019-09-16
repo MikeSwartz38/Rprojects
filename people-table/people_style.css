@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pTable {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: left;
+
+}
+
+.formContainer {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: left;
+  
+}
+
+table {  
+  border-spacing: 0;
+  border-radius: 15px 15px 15px 15px;
+  border: 15px solid rgb(192, 209, 247);
+  padding: 10px;
+  justify-content: center;
+  display: inline-block;
+  
+}
+
+th, td {
+  text-align: center;
+  padding: 5px;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+form {  
+  border-spacing: 0;
+  border-radius: 15px 15px 15px 15px;
+  border: 15px solid rgb(192, 209, 247);
+  padding: 10px;
+  justify-content: center;
+  display: inline-block;
+  
+}
+
+.delete-row {
+  float: right;
+}
