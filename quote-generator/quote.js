@@ -36,4 +36,5 @@ generate.onclick = () => {
 
 function displayQuote(quote) {
   $generatedQuote.text(quote.quote);
+  $generatedAuthor.text(quote.author);
 }
