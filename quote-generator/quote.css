@@ -42,7 +42,7 @@ header {
 }
 
 #quote {
-  width: 800px;
+  width: 790px;
   height: 190px;
   display: flex;
   font-size: 25px;
@@ -50,12 +50,12 @@ header {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 10px 10px 0px 0px;
   
 }
 
 #author {
-  width: 800px;
+  width: 790px;
   height: 190px;
   display: flex;
   font-size: 25px;
@@ -63,13 +63,13 @@ header {
   justify-content: center;
   align-items: center;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 0px 0px 10px 10px;
   
 }
 
 .generate-button {
   display: flex;
-  width: 800px;
+  width: 790px;
   height: 200px;
   justify-content: center;
   align-items: center;

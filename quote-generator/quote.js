@@ -11,9 +11,9 @@ var settings = {
 
 const button = document.getElementById("generate");
 const $generatedQuote = $("#quote");
+const $generatedAuthor = $("#author");
 
 generate.onclick = () => {
-  callLocalServer();
   var quote = null;
   var quoteString = localStorage.getItem('quote');
   if(quoteString != null) {
@@ -31,15 +31,6 @@ generate.onclick = () => {
     localStorage.setItem('quote', JSON.stringify(quote));
     displayQuote(quote);
     // console.log(newQuote);
-  });
-}
-
-function callLocalServer() {
-  $.ajax({	
-    "url": "http://localhost:8888",
-    "method": "GET"
-  }).done(function (data) {
-    console.log(data);
   });
 }
 
