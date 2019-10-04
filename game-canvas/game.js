@@ -25,53 +25,55 @@ var player = {
     name: 'P'
 }
 
+var enemyList = {};
+
 var enemy = {
-    x: 50,
+    x: 150,
     y: 350,
-    spdX: 30,
-    spdY: 5,
-    name: 'E'
+    spdX: 10,
+    spdY: 15,
+    name: 'E',
+    id: 'E1'
 };
+enemyList['E1'] = enemy
+
+var enemy2 = {
+    x: 250,
+    y: 350,
+    spdX: 10,
+    spdY: -15,
+    name: 'E',
+    id: 'E2'
+};
+enemyList['E2'] = enemy2
 
 setInterval(update, 40); //(name of function, time period in ms);
 
-function updatePlayer () {
-    //player:
-    player.x += player.spdX;
-    player.y += player.spdY;
-    ctx.fillText(player.name,player.x,player.y)
+function updateEntity (something) {
+    //enemy or player:
+    something.x += something.spdX;
+    something.y += something.spdY;
+    ctx.fillText(something.name,something.x,something.y)
 
-    if (player.x < 0 || player.x > width) {
+    if (something.x < 0 || something.x > width) {
         console.log(message);
-        player.spdX = -player.spdX;
+        something.spdX = -something.spdX;
     }
 
-    if (player.y < 0 || player.y > height) {
+    if (something.y < 0 || something.y > height) {
         console.log(message);
-        player.spdY = -player.spdY;
+        something.spdY = -something.spdY;
     }
-}
-
-function updateEnemy () {
-     //enemy:
-     enemy.x += enemy.spdX;
-     enemy.y += enemy.spdY;
-     ctx.fillText(enemy.name,enemy.x,enemy.y)
- 
-     if (enemy.x < 0 || enemy.x > width) {
-         console.log(message);
-         enemy.spdX = -enemy.spdX;
-     }
- 
-     if (enemy.y < 0 || enemy.y > height) {
-         console.log(message);
-         enemy.spdY = -enemy.spdY;
-     }
 }
 
 function update() {
-    updatePlayer();
-    updateEnemy();
+    ctx.clearRect(0, 0, width, height); //remove the letter after it moves so it doens't leave trail.
+
+    for (var key in enemyList) {
+        updateEntity(enemyList[key]);
+    }
+
+    updateEntity(player);
 }
 
 
